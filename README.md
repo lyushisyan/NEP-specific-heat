@@ -6,7 +6,7 @@
 
 Phonon DOS and specific heat analysis for silicon nanostructures (thin film / nanowire / quantum dot) using NEP, with bulk and Debye comparisons.
 
-## Publication
+### Publication
 
 This repository contains the computational notebooks used in the publication below.
 If you use this code or results, please cite:
@@ -14,7 +14,7 @@ If you use this code or results, please cite:
 [1] S. Liu, G. Zhang, F. Yin, A. A. Barinov, V. I. Khvesyuk, and N. Yang, *Temperature dependence of specific heat capacity of nanostructures via neuroevolution machine-learned potential*, Journal of Applied Physics **138**, 104301 (2025). https://doi.org/10.1063/5.0284002
 
 
-## Project Notebooks
+### Project Notebooks
 
 - `Bulk_Cv.ipynb`: bulk DOS, Cv, Debye comparison, cumulative Cv
 - `Create.ipynb`: build Si thin film, nanowire, and quantum dot structures
@@ -23,7 +23,7 @@ If you use this code or results, please cite:
 - `DOS_Dot.ipynb`: discrete vibrational frequencies for quantum dots
 - `Heat_Cap.ipynb`: aggregate Cv(T) and exponent n(T) across systems
 
-## Environment
+### Environment
 
 Recommended: conda with Python 3.10+
 
@@ -45,7 +45,7 @@ conda activate ph3-env
 pip install numpy scipy pandas matplotlib ase seekpath calorine jupyter
 ```
 
-## Required File and Folders
+### Required File and Folders
 
 - NEP model: `NEP/Si_2022_NEP3_3body.txt`
 - Recommended folders:
@@ -55,7 +55,7 @@ pip install numpy scipy pandas matplotlib ase seekpath calorine jupyter
   - `n/`
   - `Fig/`
 
-## Recommended Run Order
+### Recommended Run Order
 
 1. `Bulk_Cv.ipynb`
 2. `Create.ipynb`
@@ -66,9 +66,9 @@ pip install numpy scipy pandas matplotlib ase seekpath calorine jupyter
 
 `Heat_Cap.ipynb` depends on outputs from previous notebooks (`DOS/*`, `Cv/Cv_bulk.txt`, `n/n_bulk.txt`).
 
-## Notebook I/O
+### Notebook I/O
 
-### 1) `Bulk_Cv.ipynb`
+#### 1) `Bulk_Cv.ipynb`
 Input: internally built bulk Si
 
 Output:
@@ -78,7 +78,7 @@ Output:
 - `Cv/cumulative_Cv_T*K.txt`
 - `Fig/*`
 
-### 2) `Create.ipynb`
+#### 2) `Create.ipynb`
 Input: none
 
 Output:
@@ -86,27 +86,27 @@ Output:
 - `Structure/Si_wire_*.xyz`, `Structure/Si_wire_*.cif`
 - `Structure/Si_dot_*.xyz`, `Structure/Si_dot_*.cif`
 
-### 3) `DOS_Film.ipynb`
+#### 3) `DOS_Film.ipynb`
 Input: `Structure/Si_film_*.xyz`
 
 Output:
 - `DOS/DOS_Si_film_*.txt`
 - `Fig/Disp/Disp_DOS_Si_film_*.png` (conditional)
 
-### 4) `DOS_Wire.ipynb`
+#### 4) `DOS_Wire.ipynb`
 Input: `Structure/Si_wire_*.xyz`
 
 Output:
 - `DOS/DOS_Si_wire_*.txt`
 - `Fig/Disp/Disp_DOS_Si_wire_*.png` (conditional)
 
-### 5) `DOS_Dot.ipynb`
+#### 5) `DOS_Dot.ipynb`
 Input: `Structure/Si_dot_*.xyz`
 
 Output:
 - `DOS/Freq_Si_dot_*.txt`
 
-### 6) `Heat_Cap.ipynb`
+#### 6) `Heat_Cap.ipynb`
 Input:
 - `DOS/DOS_Si_film_*.txt`
 - `DOS/DOS_Si_wire_*.txt`
@@ -121,7 +121,7 @@ Output:
 - `Fig/Cv_cumulative_*.png`
 - `Fig/DOS_vs_frequency_*.png`
 
-## Notes
+### Notes
 
 - Frequency units may differ across notebooks; keep unit convention consistent in post-processing.
 - Large meshes (e.g. `160x160x160`) are computationally expensive.
@@ -137,14 +137,14 @@ mkdir -p Fig/Disp DOS Cv n Structure
 
 使用 NEP 势函数计算硅纳米结构（薄膜/纳米线/量子点）的声子 DOS 与比热，并与 bulk 及 Debye 模型对比。
 
-## 发表
+### 发表
 
 本仓库为以下论文发表时使用的计算代码。
 如果你使用了本仓库代码或结果，请引用：
 
 [1] S. Liu, G. Zhang, F. Yin, A. A. Barinov, V. I. Khvesyuk, and N. Yang, *Temperature dependence of specific heat capacity of nanostructures via neuroevolution machine-learned potential*, Journal of Applied Physics **138**, 104301 (2025). https://doi.org/10.1063/5.0284002
 
-## 项目 Notebook
+### 项目 Notebook
 
 - `Bulk_Cv.ipynb`：计算 bulk 的 DOS、Cv、Debye 对比和累计 Cv
 - `Create.ipynb`：生成 Si 薄膜、纳米线、量子点结构
@@ -153,7 +153,7 @@ mkdir -p Fig/Disp DOS Cv n Structure
 - `DOS_Dot.ipynb`：计算量子点离散振动频率
 - `Heat_Cap.ipynb`：汇总不同结构的 `Cv(T)` 和 `n(T)`
 
-## 环境依赖
+### 环境依赖
 
 建议使用 conda（Python 3.10+）。
 
@@ -175,7 +175,7 @@ conda activate ph3-env
 pip install numpy scipy pandas matplotlib ase seekpath calorine jupyter
 ```
 
-## 必要文件与目录
+### 必要文件与目录
 
 - NEP 模型文件：`NEP/Si_2022_NEP3_3body.txt`
 - 建议目录：
@@ -185,7 +185,7 @@ pip install numpy scipy pandas matplotlib ase seekpath calorine jupyter
   - `n/`
   - `Fig/`
 
-## 推荐执行顺序
+### 推荐执行顺序
 
 1. `Bulk_Cv.ipynb`
 2. `Create.ipynb`
@@ -196,9 +196,9 @@ pip install numpy scipy pandas matplotlib ase seekpath calorine jupyter
 
 `Heat_Cap.ipynb` 依赖前序输出（`DOS/*`、`Cv/Cv_bulk.txt`、`n/n_bulk.txt`）。
 
-## 各 Notebook 输入/输出
+### 各 Notebook 输入/输出
 
-### 1) `Bulk_Cv.ipynb`
+#### 1) `Bulk_Cv.ipynb`
 输入：内部构建 bulk Si
 
 输出：
@@ -208,7 +208,7 @@ pip install numpy scipy pandas matplotlib ase seekpath calorine jupyter
 - `Cv/cumulative_Cv_T*K.txt`
 - `Fig/*`
 
-### 2) `Create.ipynb`
+#### 2) `Create.ipynb`
 输入：无
 
 输出：
@@ -216,27 +216,27 @@ pip install numpy scipy pandas matplotlib ase seekpath calorine jupyter
 - `Structure/Si_wire_*.xyz`、`Structure/Si_wire_*.cif`
 - `Structure/Si_dot_*.xyz`、`Structure/Si_dot_*.cif`
 
-### 3) `DOS_Film.ipynb`
+#### 3) `DOS_Film.ipynb`
 输入：`Structure/Si_film_*.xyz`
 
 输出：
 - `DOS/DOS_Si_film_*.txt`
 - `Fig/Disp/Disp_DOS_Si_film_*.png`（条件触发）
 
-### 4) `DOS_Wire.ipynb`
+#### 4) `DOS_Wire.ipynb`
 输入：`Structure/Si_wire_*.xyz`
 
 输出：
 - `DOS/DOS_Si_wire_*.txt`
 - `Fig/Disp/Disp_DOS_Si_wire_*.png`（条件触发）
 
-### 5) `DOS_Dot.ipynb`
+#### 5) `DOS_Dot.ipynb`
 输入：`Structure/Si_dot_*.xyz`
 
 输出：
 - `DOS/Freq_Si_dot_*.txt`
 
-### 6) `Heat_Cap.ipynb`
+#### 6) `Heat_Cap.ipynb`
 输入：
 - `DOS/DOS_Si_film_*.txt`
 - `DOS/DOS_Si_wire_*.txt`
@@ -251,7 +251,7 @@ pip install numpy scipy pandas matplotlib ase seekpath calorine jupyter
 - `Fig/Cv_cumulative_*.png`
 - `Fig/DOS_vs_frequency_*.png`
 
-## 说明
+### 说明
 
 - 不同 notebook 频率单位标注可能不完全一致，后处理时请统一单位口径。
 - 大网格（如 `160x160x160`）计算开销较大。
