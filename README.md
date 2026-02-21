@@ -1,9 +1,8 @@
+# NEP-specific-heat
 
 [English](#english-version) | [中文](#中文版)
 
 ## English Version
-
-# NEP-specific-heat
 
 Phonon DOS and specific heat analysis for silicon nanostructures (thin film / nanowire / quantum dot) using NEP, with bulk and Debye comparisons.
 
@@ -135,8 +134,6 @@ mkdir -p Fig/Disp DOS Cv n Structure
 ---
 
 ## 中文版
-
-# NEP-specific-heat
 
 使用 NEP 势函数计算硅纳米结构（薄膜/纳米线/量子点）的声子 DOS 与比热，并与 bulk 及 Debye 模型对比。
 
